@@ -18,3 +18,29 @@
 * `null`의 타입은 object이다.
 
 ### 3.2 자바스크립트 참조 타입(객체 타입)
+* `객체` : **이름(key):값(value)** 형태의 프로퍼티들을 저장하는 컨테이너
+* 객체는 여러 개의 프로퍼티들을 포함할 수 있다.
+* `프로퍼티` : 객체 안에서 선언된 이름과 값으로 이루어진 한 쌍
+* 프로퍼티는 기본 타입의 값을 포함하거나, 다른 객체를 가리킬 수도 있다.
+* 프로퍼티의 값이 함수일 경우 **메서드**라고 한다.
+
+example
+```javascript
+const person = {
+  firstName: "Lynn",
+  lastName: "Ha"
+  age: 20
+}
+
+// 위의 예시에서 person은 객체이고 firstName은 프로퍼티 이름(key), "Lynn"은 프로퍼티 값(value)이다.
+```  
+  
+* 접근하려는 프로퍼티가 표현식이나 예약어일 경우 대괄호 표기법만을 사용해야 한다.  
+    
+example
+```javascript
+foo['full-name'] = 'foo bar';      // '-' 연산자가 있는 표현식
+console.log(foo.['full-name']);    // foo bar
+console.log(foo.full-name);        // NaN (수치 연산을 해서 정상적인 값을 얻지 못할 때 출력되는 값)
+```
+
